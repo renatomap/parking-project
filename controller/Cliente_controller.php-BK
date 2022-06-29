@@ -1,0 +1,20 @@
+<?php
+  include('../db/conexao.php');
+
+  class Veiculo_Model {
+    private $conexao;
+
+    function __construct() {
+      $con = new Conexao();
+      $this->conexao = $con->getConexao();
+    }
+
+    function ListarAll() {
+      $sql = "SELECT * FROM usuario";
+      $dados = $this->conexao->prepare($sql);
+      $dados->execute();
+      return $dados;
+    }
+    
+  }
+?>

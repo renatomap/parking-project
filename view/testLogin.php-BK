@@ -1,0 +1,22 @@
+<?php
+  // print_r($_REQUEST)
+
+  if(isset($_POST['submit']) && !empty($_POST['nome'] && !empty($_POST['cpf']))) {
+    include_once('../db/conexao.php');
+    $cpf = $_POST['cpf'];
+    $nome = $_POST['nome'];
+
+    // teste de inserção
+    // print_r('Nome: '. $nome);
+    // print_r('<br>');
+    // print_r('CPF: '. $cpf);
+
+    $sql = "SELECT * FROM usuarios WHERE cpf = '$cpf' AND nome = '$nome'";
+    $result = $conexao->query($sql);
+    // print_r($result);
+
+    
+  } else {
+    header('Location: ../view/login_view.php');
+  }
+?>
