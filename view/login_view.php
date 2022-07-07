@@ -36,12 +36,10 @@
     background-color: deepskyblue;
     cursor: pointer;
   }
-  .nav-link a{
-    background-color: #fff;
-  }
+
 </style>
 
-<a href="index.php" class="nav-link bg-danger">Voltar</a>
+<a href="index.php" >Voltar</a>
 <div>
   <h1>Login</h1>
   <form action="../controller/Cliente_controller.php" method="post">

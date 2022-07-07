@@ -6,12 +6,12 @@
     $cpf = $_POST['cpf'];
     $nome = $_POST['nome'];
     $telefone = $_POST['telefone'];
-    $data_entrada = $_POST['data_entrada'];
+    $hora_entrada = $_POST['hora_entrada'];
     $placa = $_POST['placa'];
     $modelo = $_POST['modelo'];
     $marca = $_POST['marca'];
 
-    $sqlUpdate = "UPDATE usuarios SET nome = '$nome', cpf = '$cpf', telefone = '$telefone', data_entrada = '$data_entrada', placa = '$placa', modelo = '$modelo', marca = '$marca' WHERE id = '$id'";
+    $sqlUpdate = "UPDATE usuarios SET nome = '$nome', cpf = '$cpf', telefone = '$telefone', hora_entrada = '$hora_entrada', placa = '$placa', modelo = '$modelo', marca = '$marca' WHERE id = '$id'";
 
     $result = $conexao->query($sqlUpdate);
   }

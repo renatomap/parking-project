@@ -15,7 +15,7 @@ body{
   width: 20%;
 }
 fieldset{
-  border: 3px solid dodgerblue;
+  border: 3px solid hsl(210, 96%, 28%);
 }
 legend{
   border: 1px solid dodgerblue;
@@ -98,7 +98,7 @@ legend{
 /* CSS - sistema.php */
 .lista_clientes {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
@@ -119,4 +119,15 @@ legend{
   display: flex;
   justify-content: center;
   gap: .2%;
+}
+
+/* CSS - cadastro.php */
+.nav-link {
+  background-color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
 }

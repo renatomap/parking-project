@@ -21,12 +21,12 @@
         $cpf = $_POST['cpf'];
         $nome = $_POST['nome'];
         $telefone = $_POST['telefone'];
-        $data_entrada = $_POST['data_entrada'];
+        $hora_entrada = $_POST['hora_entrada'];
         $placa = $_POST['placa'];
         $modelo = $_POST['modelo'];
         $marca = $_POST['marca'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(cpf, nome, telefone, data_entrada, placa, modelo, marca) VALUES ('$cpf', '$nome', '$telefone', '$data_entrada', '$placa', '$modelo', '$marca')");
+        $resul = mysqli_query($conexao, "INSERT INTO usuarios(cpf, nome, telefone, hora_entrada, placa, modelo, marca) VALUES ('$cpf', '$nome', '$telefone', '$hora_entrada', '$placa', '$modelo', '$marca')");
 
         header('Location: ../view/login_view.php');
     }
@@ -47,8 +47,7 @@
     // }
 ?>
 
-
-<a href="index.php">Voltar</a>
+<a href="index.php" >Voltar</a>
     <div class="box">
         <form action="cadastro_view.php" method="POST">
             <fieldset>
@@ -74,8 +73,8 @@
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
                 <br><br>
-                <label for="data_Entrada"><b>Data de Entrada:</b></label>
-                <input type="date" name="data_entrada" id="data_entrada" required>
+                <label for="hora_Entrada"><b>Hora de Entrada:</b></label>
+                <input type="time" name="hora_entrada" id="hora_entrada" required>
                 <br><br><br>
                 <div class="inputBox">
                     <input type="text" name="placa" id="placa" class="inputUser" required>

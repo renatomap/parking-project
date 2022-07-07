@@ -14,7 +14,7 @@
                 $nome = $row['nome'];
                 $cpf = $row['cpf'];
                 $telefone = $row['telefone'];
-                $data_entrada = $row['data_entrada'];
+                $hora_entrada = $row['hora_entrada'];
                 $placa = $row['placa'];
                 $modelo = $row['modelo'];
                 $marca = $row['marca'];
@@ -61,8 +61,8 @@
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
                 <br><br>
-                <label for="data_Entrada"><b>Data de Entrada:</b></label>
-                <input type="date" name="data_entrada" id="data_entrada" value="<?php echo $data_entrada?>"  required>
+                <label for="hora_Entrada"><b>Hora de Entrada:</b></label>
+                <input type="time" name="hora_entrada" id="hora_entrada" value="<?php echo $hora_entrada?>"  required>
                 <br><br><br>
                 <div class="inputBox">
                     <input type="text" name="placa" id="placa" class="inputUser" value="<?php echo $placa?>" required>

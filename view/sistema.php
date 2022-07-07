@@ -13,9 +13,9 @@
 
   if(!empty($_GET['search'])) {
     $data = $_GET['search'];
-    $sql = "SELECT * FROM usuarios WHERE id LIKE '%$data%' OR cpf LIKE '%$data%' OR nome LIKE '%$data%' OR telefone LIKE '%$data%' OR data_entrada LIKE '%$data%' OR placa LIKE '%$data%' OR modelo LIKE '%$data%' OR marca LIKE '%$data%' ORDER BY id DESC";
+    $sql = "SELECT * FROM usuarios WHERE id LIKE '%$data%' OR cpf LIKE '%$data%' OR nome LIKE '%$data%' OR telefone LIKE '%$data%' OR hora_entrada LIKE '%$data%' OR placa LIKE '%$data%' OR modelo LIKE '%$data%' OR marca LIKE '%$data%' ORDER BY id DESC";
   } else {
-    $sql = "SELECT * FROM usuarios ORDER BY data_entrada ASC";
+    $sql = "SELECT * FROM usuarios ORDER BY hora_entrada ASC";
   }
 
   $result = $conexao->query($sql);
@@ -57,13 +57,13 @@
     </nav>
   </div>
   <h1 class="lista_clientes">Lista de Clientes</h1>
-  <div class="box-search">
+  <!-- <div class="box-search">
     <input type="search" class="fom-control w-25" placeholder="Pesquisar" id="pesquisar">
     <button onclick="searchData()" class="btn btn-primary">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
     </button>
-  </div>
+  </div> -->
   <div class="m-5">
     <table class="table table-hover text-white table-bg">
       <thead>
@@ -72,7 +72,7 @@
         <th scope="col">CPF</th>
         <th scope="col">Nome</th>
         <th scope="col">Telefone</th>
-        <th scope="col">Data de Entrada</th>
+        <th scope="col">Hora de Entrada</th>
         <th scope="col">Placa</th>
         <th scope="col">Modelo</th>
         <th scope="col">Marca</th>
@@ -87,7 +87,7 @@
           echo "<td>".$row['cpf']."</td>";
           echo "<td>".$row['nome']."</td>";
           echo "<td>".$row['telefone']."</td>";
-          echo "<td>".$row['data_entrada']."</td>";
+          echo "<td>".$row['hora_entrada']."</td>";
           echo "<td>".$row['placa']."</td>";
           echo "<td>".$row['modelo']."</td>";
           echo "<td>".$row['marca']."</td>";
@@ -110,6 +110,9 @@
     </table>
   </div>
 </body>
+<!-- <?php
+        include_once('../public/js/script.js');
+?> -->
   <script>
     var search = document.getElementById('pesquisar')
 
